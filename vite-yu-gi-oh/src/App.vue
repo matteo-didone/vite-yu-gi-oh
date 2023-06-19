@@ -37,4 +37,6 @@ export default {
   -->
 </template>
 
-<style scoped></style>
+<style lang="scss">
+@import url('./styles/general.scss');
+</style> 
