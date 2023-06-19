@@ -34,7 +34,6 @@ export default {
 <style lang="scss" scoped>
 header {
     width: 100%;
-    background-color: white;
 
     .container-fluid {
         display: flex;
