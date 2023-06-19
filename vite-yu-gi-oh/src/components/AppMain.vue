@@ -1,8 +1,5 @@
 <template>
     <main>
-
-        <h1> Main </h1>
-
         <div class="outer-wrapper">
             <div class="dropdown-menu">
 
@@ -24,7 +21,7 @@
 <script>
 import { store } from '../store.js'
 import CardsList from './CardsList.vue';
-import  SingleCard from './SingleCard.vue';
+import SingleCard from './SingleCard.vue';
 
 export default {
     name: 'AppMain',
@@ -47,4 +44,14 @@ export default {
 </script>
 
 
-<style lang="scss"></style>
+<style lang="scss">
+main {
+    .outer-wrapper {
+        width: 100%;
+        height: 100vh;
+        background-color: #d48f38;
+    }
+
+    .inner-wrapper {}
+}
+</style>

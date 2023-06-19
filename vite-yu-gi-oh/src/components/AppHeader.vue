@@ -4,7 +4,7 @@
             <div class="container-fluid d-flex align-items-center justify-content-start">
                 <a class="navbar-brand" href="#">
                     <img src="../assets/img/yugioh.png" alt="yu-gi-oh-logo" width="120" height="60"
-                        class="d-inline-block align-text-top">
+                        class="d-inline-block align-text-top ms-3">
                 </a>
                 <span class="title">Yu-Gi-Oh Api</span>
             </div>
@@ -32,13 +32,17 @@ export default {
 
 
 <style lang="scss" scoped>
-.container-fluid {
-    display: flex;
-    justify-content: center;
-}
+header {
+    width: 100%;
+    background-color: white;
 
-.title {
-    font-size: 3rem;
-}
+    .container-fluid {
+        display: flex;
+        justify-content: center;
+    }
 
+    .title {
+        font-size: 3rem;
+    }
+}
 </style>
