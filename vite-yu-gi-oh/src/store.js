@@ -9,11 +9,11 @@ import { reactive } from 'vue';
 // Inside this object, we'll add all the properties that we want to be reactive.
 const store = reactive({
     searchText: '',
+    loading: true,
     cards: [],
     card: {},
-    loading: true,
 });
 
 // We are exporting the store object so that we can use it in other components. 
-export default store; 
+export {store}; 
 // We can export the store object as a default export because we are only exporting one object. If we were exporting multiple objects, we would have to use named exports.

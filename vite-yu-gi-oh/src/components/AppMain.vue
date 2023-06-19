@@ -1,5 +1,8 @@
 <template>
     <main>
+
+        <h1> Main </h1>
+
         <div class="outer-wrapper">
             <div class="dropdown-menu">
 
@@ -20,7 +23,20 @@
 </template>
 
 <script>
+    import {store} from '../store.js'
 
+    export default {
+        name: 'AppMain',
+        data() {
+            return {
+                store, 
+            }
+        },
+
+        methods: {
+            
+        }
+    }
 </script>
 
 <script setup>
