@@ -1,40 +1,34 @@
 <template>
     <header>
-
-        <h1> Header </h1>
-
-        <div class="header-wrapper">
-            <div class="logo">
-
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="vite-yu-gi-oh/src/assets/img/yugioh.png" alt="yu-gi-oh-logo" width="80" height="40"
+                        class="d-inline-block align-text-top">
+                    Yu-Gi-Oh Api
+                </a>
             </div>
-
-            <div class="title">
-
-            </div>
-        </div>
-
+        </nav>
     </header>
 </template>
 
 <script>
-    import {store} from '../store.js'
+import { store } from '../store.js'
 
-    export default {
-        name: 'AppHeader',
-        data() {
-            
-            return {
-                store,
-            }
-        },
+export default {
+    name: 'AppHeader',
+    data() {
 
-        methods: {
-
+        return {
+            store,
         }
+    },
+
+    methods: {
+
     }
+}
 </script>
 
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
