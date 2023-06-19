@@ -17,9 +17,9 @@
             </div>
 
             <div class="inner-wrapper">
-                <div class="cards-wrapper">
+                <div class="cards-and-bar-wrapper">
                     <div class="found-bar">
-
+                        <span>Found 39 cards</span>
                     </div>
 
                     <CardsList />
@@ -87,6 +87,36 @@ main {
         background-color: white;
         width: 100%;
         height: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .cards-and-bar-wrapper{
+            width: 95%;
+            margin: auto;
+            height: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+
+            .found-bar{
+                width: 100%;
+                height: 80px;
+                background-color: #212529;
+                color: white;
+
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+
+                span{
+                    padding-left: 10px;
+                }
+            }
+        }
     }
 }
 </style>
