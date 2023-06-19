@@ -1,8 +1,9 @@
 <script>
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
-import CardsList from './components/CardsList.vue';
-import SingleCard from './components/Card.vue';
+// Do we have to import these components here? No, they're not needed!
+// import CardsList from './components/CardsList.vue';
+// import SingleCard from './components/Card.vue';
 
 import { store } from './store.js';
 
@@ -12,8 +13,9 @@ export default {
   components: {
     AppHeader,
     AppMain,
-    CardsList,
-    SingleCard,
+
+    // CardsList,
+    // SingleCard,
   },
 
   data() {
@@ -30,8 +32,11 @@ export default {
 
   <AppHeader />
   <AppMain />
+  <!-- 
+  Not needed: 
   <CardsList />
-  <SingleCard />
+  <SingleCard /> 
+  -->
 </template>
 
 <style scoped></style>

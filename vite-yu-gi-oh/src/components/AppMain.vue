@@ -13,6 +13,8 @@
                     <div class="found-bar">
 
                     </div>
+                    
+                    <CardsList />
                 </div>
             </div>
         </div>

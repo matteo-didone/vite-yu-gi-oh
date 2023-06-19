@@ -5,7 +5,7 @@
         </div>
 
         <div class="single-card">
-
+            <SingleCard />
         </div>
 
     </div>
