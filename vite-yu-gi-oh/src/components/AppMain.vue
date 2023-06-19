@@ -13,7 +13,7 @@
                     <div class="found-bar">
 
                     </div>
-                    
+
                     <CardsList />
                 </div>
             </div>
@@ -22,25 +22,30 @@
 </template>
 
 <script>
-    import {store} from '../store.js'
+import { store } from '../store.js'
+import { CardsList } from './CardsList.vue';
 
-    export default {
-        name: 'AppMain',
-        data() {
-            return {
-                store, 
-            }
-        },
+export default {
+    name: 'AppMain',
+    data() {
+        return {
+            store,
 
-        methods: {
-            
         }
+    },
+
+    components: {
+        CardsList,
+    },
+
+    methods: {
+
     }
+}
 </script>
 
 <script setup>
 
 </script>
 
-<style lang="scss">
-</style>
+<style lang="scss"></style>

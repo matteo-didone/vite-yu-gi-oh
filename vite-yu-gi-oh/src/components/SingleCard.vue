@@ -1,27 +1,29 @@
-<template>
-
-</template>
+<template></template>
 
 <script>
-    import {store} from '../store.js'
+import { store } from '../store.js'
 
-    export default {
-        name: 'SingleCard',
-        data() {
-            return {
-                store, 
-            }
-        },
-
-        methods: {
-            
+export default {
+    
+    name: 'SingleCard',
+    data() {
+        return {
+            store,
         }
+    },
+
+    components: {
+        SingleCard,
+    },
+
+    methods: {
+
     }
+}
 </script>
 
 <script setup>
 
 </script>
 
-<style lang="scss">
-</style>
+<style lang="scss"></style>

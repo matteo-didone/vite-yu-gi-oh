@@ -6,13 +6,14 @@
 
         <div class="single-card">
             <SingleCard />
-        </div>
+        </div>  
 
     </div>
 </template>
 
 <script>
 import { store } from '../store.js'
+import { SingleCard } from './SingleCard.vue';
 
 export default {
     name: 'CardsList',
@@ -20,6 +21,10 @@ export default {
         return {
             store,
         }
+    },
+
+    components: {
+        SingleCard,
     },
 
     methods: {
