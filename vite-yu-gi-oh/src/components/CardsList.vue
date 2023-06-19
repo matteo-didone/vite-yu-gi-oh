@@ -1,14 +1,5 @@
 <template>
-    <div class="cards-wrapper">
-        <div class="found-bar">
-
-        </div>
-
-        <div class="single-card">
-            <SingleCard />
-        </div>  
-
-    </div>
+    <SingleCard />
 </template>
 
 <script>
@@ -16,10 +7,11 @@ import { store } from '../store.js'
 import { SingleCard } from './SingleCard.vue';
 
 export default {
-    name: 'CardsList',
+    name: 'AppMain',
     data() {
         return {
             store,
+
         }
     },
 
@@ -33,8 +25,5 @@ export default {
 }
 </script>
 
-<script setup>
-
-</script>
 
 <style lang="scss"></style>

@@ -28,12 +28,10 @@ export default {
 </script>
 
 <template>
-  <h1> {{ store.searchText }} </h1>
-
   <AppHeader />
   <AppMain />
   <!-- 
-  Not needed: 
+  Not needed:
   <CardsList />
   <SingleCard /> 
   -->

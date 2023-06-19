@@ -1,4 +1,6 @@
-<template></template>
+<template>
+
+</template>
 
 <script>
 import { store } from '../store.js'
@@ -12,18 +14,11 @@ export default {
         }
     },
 
-    components: {
-        SingleCard,
-    },
-
     methods: {
 
     }
 }
 </script>
 
-<script setup>
-
-</script>
 
 <style lang="scss"></style>

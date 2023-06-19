@@ -24,6 +24,7 @@
 <script>
 import { store } from '../store.js'
 import { CardsList } from './CardsList.vue';
+import { SingleCard } from './SingleCard.vue';
 
 export default {
     name: 'AppMain',
@@ -36,6 +37,7 @@ export default {
 
     components: {
         CardsList,
+        SingleCard,
     },
 
     methods: {
@@ -44,8 +46,5 @@ export default {
 }
 </script>
 
-<script setup>
-
-</script>
 
 <style lang="scss"></style>
