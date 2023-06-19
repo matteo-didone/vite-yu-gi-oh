@@ -1,0 +1,35 @@
+// Mixin for flex display
+@mixin flex($direction: row, $justify: center, $align: center, $wrap: wrap) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    flex-wrap: $wrap;
+}
+
+// Mixin for centering elements horizontally and vertically
+@mixin positionCentered($fromLeft: 50%, $fromTop: 50%) {
+    position: absolute;
+    top: $fromTop;
+    left: $fromLeft;
+    transform: translate(-$fromLeft, -$fromTop);
+}
+
+// Mixin for float
+@mixin float($floatDirection: left) {
+    float: $floatDirection;
+}
+
+// Mixin for clearfix
+@mixin clearfix {
+
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
