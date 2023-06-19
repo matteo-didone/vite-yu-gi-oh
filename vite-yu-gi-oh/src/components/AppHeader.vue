@@ -3,8 +3,7 @@
         <nav class="navbar navbar-light bg-light">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
-                    <img src="vite-yu-gi-oh/src/assets/img/yugioh.png" alt="yu-gi-oh-logo" width="80" height="40"
-                        class="d-inline-block align-text-top">
+                    <img src="../assets/img/yugioh.png" alt="yu-gi-oh-logo" width="80" height="40" class="d-inline-block align-text-top">
                     Yu-Gi-Oh Api
                 </a>
             </div>
