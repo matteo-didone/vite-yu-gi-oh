@@ -13,9 +13,6 @@
                     <div class="found-bar">
 
                     </div>
-
-                    <div class="cards">
-                    </div>
                 </div>
             </div>
         </div>
