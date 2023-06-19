@@ -4,7 +4,7 @@
 
 <script>
 import { store } from '../store.js'
-import { SingleCard } from './SingleCard.vue';
+import SingleCard from './SingleCard.vue';
 
 export default {
     name: 'AppMain',

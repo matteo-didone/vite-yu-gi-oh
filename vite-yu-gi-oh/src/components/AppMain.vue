@@ -23,8 +23,8 @@
 
 <script>
 import { store } from '../store.js'
-import { CardsList } from './CardsList.vue';
-import { SingleCard } from './SingleCard.vue';
+import CardsList from './CardsList.vue';
+import  SingleCard from './SingleCard.vue';
 
 export default {
     name: 'AppMain',
