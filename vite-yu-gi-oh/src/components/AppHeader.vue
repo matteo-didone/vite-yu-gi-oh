@@ -1,11 +1,12 @@
 <template>
     <header>
         <nav class="navbar navbar-light bg-light">
-            <div class="container-fluid">
+            <div class="container-fluid d-flex align-items-center justify-content-start">
                 <a class="navbar-brand" href="#">
-                    <img src="../assets/img/yugioh.png" alt="yu-gi-oh-logo" width="80" height="40" class="d-inline-block align-text-top">
-                    Yu-Gi-Oh Api
+                    <img src="../assets/img/yugioh.png" alt="yu-gi-oh-logo" width="120" height="60"
+                        class="d-inline-block align-text-top">
                 </a>
+                <span class="title">Yu-Gi-Oh Api</span>
             </div>
         </nav>
     </header>
@@ -30,4 +31,14 @@ export default {
 </script>
 
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.container-fluid {
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    font-size: 3rem;
+}
+
+</style>
