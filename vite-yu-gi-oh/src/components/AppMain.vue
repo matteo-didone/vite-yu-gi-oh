@@ -58,13 +58,17 @@ export default {
 <style lang="scss">
 main {
 
+    width: 100%;
+    height: 100%;
+
     display: flex;
     justify-content: center;
     align-items: center;
+    
 
     .outer-wrapper {
         width: 100%;
-        height: 1000px;
+        height: 100%;
 
         padding-left: 150px;
         padding-right: 150px;
@@ -103,6 +107,9 @@ main {
             align-items: center;
 
             .found-bar{
+
+                margin-top: 30px;
+
                 width: 100%;
                 height: 80px;
                 background-color: #212529;
