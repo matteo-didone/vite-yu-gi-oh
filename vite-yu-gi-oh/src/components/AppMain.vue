@@ -2,24 +2,12 @@
     <main>
         <div class="outer-wrapper">
 
-            <div class="dropdown">
-                <button class="btn btn-secondary text-dark bg-white dropdown-toggle" type="button" id="dropdownMenuButton2"
-                    data-bs-toggle="dropdown" aria-expanded="false">
-                    Alien
-                </button>
-
-                <ul class="dropdown-menu bg-white text-dark" aria-labelledby="dropdownMenuButton2">
-                    <li><a class="dropdown-item active" href="#">Alien</a></li>
-                    <li><a class="dropdown-item" href="#">Human</a></li>
-                    <li><a class="dropdown-item" href="#">Spell</a></li>
-                    <li><a class="dropdown-item" href="#">Trap</a></li>
-                </ul>
-            </div>
+            <SelectDropdown />
 
             <div class="inner-wrapper">
                 <div class="cards-and-bar-wrapper">
                     <div class="found-bar">
-                        <span>Found 39 cards</span>
+                        <span>Found {{ }} cards</span>
                     </div>
 
                     <CardsList />
@@ -32,6 +20,7 @@
 <script>
 import { store } from '../store.js'
 import CardsList from './CardsList.vue';
+import SelectDropdown from './SelectDropdown.vue';
 import SingleCard from './SingleCard.vue';
 
 export default {
@@ -46,6 +35,7 @@ export default {
     components: {
         CardsList,
         SingleCard,
+        SelectDropdown,
     },
 
     methods: {
@@ -64,7 +54,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 
     .outer-wrapper {
         width: 100%;
@@ -76,7 +66,7 @@ main {
         background-color: #d48f38;
     }
 
-    #dropdownMenuButton2{
+    #dropdownMenuButton2 {
         width: 150px;
         text-align: left;
 
@@ -97,7 +87,7 @@ main {
         align-items: center;
         flex-direction: column;
 
-        .cards-and-bar-wrapper{
+        .cards-and-bar-wrapper {
             width: 95%;
             margin: auto;
             height: 80%;
@@ -106,7 +96,7 @@ main {
             justify-content: flex-start;
             align-items: center;
 
-            .found-bar{
+            .found-bar {
 
                 margin-top: 30px;
 
@@ -119,7 +109,7 @@ main {
                 justify-content: flex-start;
                 align-items: center;
 
-                span{
+                span {
                     padding-left: 10px;
                 }
             }
