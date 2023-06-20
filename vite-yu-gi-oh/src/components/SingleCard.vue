@@ -1,31 +1,21 @@
 <template>
-    <article class="card mb-3 col-3">
-        <img src="" class="card-img-top" alt="">
+    <div class="card mb-4 col-3 me-3">
         <div class="card-body">
+
+            <img :src="singleCardImage" class="card-img-top" alt="">
+
             <h5 class="card-title">
-                Card Title
+                {{ singleCardName }}
             </h5>
-
-            <p class="card-text">
-                Nome Cognome
-            </p>
-
-            <p class="card-text">
-                <small class="text-muted"> Last updated 3 mins ago </small>
-            </p>
-
-            <p class="card-text">
-                <small class="text-muted"> Last updated 3 mins ago </small>
-            </p>
         </div>
-    </article>
+    </div>
 </template>
 
 <script>
 import { store } from '../store.js'
 
 export default {
-    
+
     name: 'SingleCard',
     data() {
         return {
@@ -33,9 +23,20 @@ export default {
         }
     },
 
+    props: {
+        singleCardImage: {
+            type: String,
+            required: true
+        },
+        singleCardName: {
+            type: String,
+            required: true
+        }
+    },
+
     methods: {
 
-    }
+    },
 }
 </script>
 

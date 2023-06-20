@@ -1,7 +1,11 @@
 <template>
     <div class="container">
         <div class="row p-5 justify-content-evenly">
-            <SingleCard v-for="singleCard in cardsList"/>
+            <SingleCard v-for="singleCard in cardsList" 
+            :singleCardImage="singleCard.image"
+            :singleCardName="singleCard.name" 
+            :key="singleCard.name"
+            />
         </div>
     </div>
 </template>
@@ -31,7 +35,9 @@ export default {
             .then((response) => {
                 // handle success
                 // in the console, we can see the data we get back from the API 
-                console.log(response.data.results); // Should I add .results? 
+                console.log(response.data); // Should I add .results? 
+
+                this.cardsList = response.data;
             })
             .catch(function (error) {
                 // handle error
