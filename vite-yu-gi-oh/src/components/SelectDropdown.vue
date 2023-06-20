@@ -18,13 +18,15 @@
 
 <script>
 import { store } from '../store.js'
-
+import axios from 'axios';
 
 export default {
     name: 'SingleCard',
+
     data() {
         return {
             store,
+            cardArchetypesList: [],
         }
     },
 
@@ -36,6 +38,33 @@ export default {
 
     methods: {
 
+    },
+
+    // Use the created() lifecycle hook to make an API call to the Yu-Gi-Oh! API
+    created() {
+        // Make an API call to the Yu-Gi-Oh! API
+        axios.get('https://db.ygoprodeck.com/api/v7/archetypes.php')
+            // If the API call is successful, we get a response
+            .then((response) => {
+                // If the response has data property and if it contains the desired card data
+                if (response.data && response.data.data) {
+                    // We store into a variable the card data from the response
+                    const cards = response.data.data;
+                    // We loop through the cards array
+                    for (const card of cards) {
+                        // We create an object, called cardData and we store the card image url, the card name and the card archetype properties into it
+                        const cardArchetype = {
+                            singleCardArchetype: card.archetype,
+                        };
+                        // Finally, we push the cardData object into the cardsList array
+                        this.cardArchetypesList.push(card);
+                    }
+                }
+            })
+            // If the API call fails, we get an error
+            .catch(function (error) {
+                console.log(error);
+            });
     },
 }
 </script>
