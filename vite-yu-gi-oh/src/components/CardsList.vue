@@ -4,6 +4,7 @@
         <!-- Use a bootstrap row, and p-5 adds padding to it -->
         <div class="row p-5">
 
+            <AppLoader v-if="isLoading" />
             <!-- 
                 Use v-for to loop through the cardsList array 
                 Then, we bind the singleCardImage and singleCardName props to the SingleCard component
@@ -16,7 +17,7 @@
                     -col-6 -> column width for extra small screens
                 mb-4 adds margin to the bottom of each card in the list
             -->
-            <SingleCard v-for="(singleCard, index) in cardsList" :singleCardImage="singleCard.singleCardImage"
+            <SingleCard v-else v-for="(singleCard, index) in cardsList" :singleCardImage="singleCard.singleCardImage"
                 :singleCardName="singleCard.singleCardName" :singleCardArchetype="singleCard.singleCardArchetype" :key="index" class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4" />
         </div>
     </div>
@@ -25,16 +26,20 @@
 <script>
 import axios from 'axios';
 import SingleCard from './SingleCard.vue';
+import AppLoader from './AppLoader.vue';
 
 export default {
     name: 'CardsList',
     data() {
         return {
             cardsList: [],
+            isLoading: true,
         };
     },
     components: {
         SingleCard,
+        AppLoader,
+
     },
 
     // Use the created() lifecycle hook to make an API call to the Yu-Gi-Oh! API
@@ -62,6 +67,9 @@ export default {
                         };
                         // Finally, we push the cardData object into the cardsList array
                         this.cardsList.push(cardData);
+
+                        // We set isLoading to false, because the data has been loaded
+                        this.isLoading = false;
                     }
                 }
             })
