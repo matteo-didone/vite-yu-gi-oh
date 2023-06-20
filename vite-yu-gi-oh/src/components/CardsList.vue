@@ -17,7 +17,7 @@
                 mb-4 adds margin to the bottom of each card in the list
             -->
             <SingleCard v-for="(singleCard, index) in cardsList" :singleCardImage="singleCard.singleCardImage"
-                :singleCardName="singleCard.singleCardName" :key="index" class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4" />
+                :singleCardName="singleCard.singleCardName" :singleCardArchetype="singleCard.singleCardArchetype" :key="index" class="col-lg-2 col-md-3 col-sm-4 col-6 mb-4" />
         </div>
     </div>
 </template>
@@ -50,13 +50,15 @@ export default {
                     // We loop through the cards array
                     for (const card of cards) {
                         // We store into a variable the card image url
+                        // ? operator to be used where the card doesn't have an image URL
                         const imageUrl = card.card_images[0]?.image_url;
                         // We store into a variable the card name
 
-                        // We create an object, called cardData and we store the card image url and the card name properties into it
+                        // We create an object, called cardData and we store the card image url, the card name and the card archetype properties into it
                         const cardData = {
                             singleCardImage: imageUrl,
                             singleCardName: card.name,
+                            singleCardArchetype: card.archetype,
                         };
                         // Finally, we push the cardData object into the cardsList array
                         this.cardsList.push(cardData);
