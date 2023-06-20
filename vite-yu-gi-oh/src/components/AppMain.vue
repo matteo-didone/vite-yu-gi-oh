@@ -64,7 +64,7 @@ main {
 
     .outer-wrapper {
         width: 100%;
-        height: 100vh;
+        height: 1000px;
 
         padding-left: 150px;
         padding-right: 150px;
